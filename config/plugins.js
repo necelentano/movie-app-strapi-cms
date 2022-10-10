@@ -1,5 +1,3 @@
-const crypto = require("crypto");
-
 module.exports = ({ env }) => ({
   slugify: {
     enabled: true,
@@ -10,7 +8,7 @@ module.exports = ({ env }) => ({
           references: "title",
         },
       },
-      jwtSecret: crypto.randomBytes(16).toString("base64"),
+      jwtSecret: env("JWT_SECRET"),
     },
   },
 });

@@ -8,7 +8,7 @@ module.exports = ({ env }) => ({
           references: "title",
         },
       },
-      jwtSecret: env("JWT_SECRET"),
     },
   },
+  jwtSecret: env("JWT_SECRET"),
 });
